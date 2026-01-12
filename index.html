@@ -1,0 +1,1206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<!-- My own CSS -->
+    <link href="course.css" rel="stylesheet">
+
+	<title>10-701 S26</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #832423;">
+      <div class="container-lg">
+        <a class="navbar-brand" href="index.html#Home">10-701</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     	  <span class="navbar-toggler-icon"></span>
+    	</button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+      	  <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        	<li class="nav-item"><a class="nav-link" href="index.html#Syllabus">Syllabus</a></li>
+        	<li class="nav-item"><a class="nav-link" href="index.html#Staff">Staff</a></li>
+        	<li class="nav-item"><a class="nav-link" href="index.html#Schedule">Schedule</a></li>
+        	<li class="nav-item"><a class="nav-link" href="index.html#Recitations">Recitations</a></li>
+        	<li class="nav-item"><a class="nav-link" href="index.html#Homework">Assignments</a></li>
+        	<li class="nav-item"><a class="nav-link" href="index.html#Project">Project</a></li>
+        	<li class="nav-item"><a class="nav-link" href="index.html#Calendar">Course Calendar</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+	<main role="main">
+	<div class="container-lg">
+	  <div class="row">
+	  	<div class="col-lg-12">
+  	  	  <img src="ml-logo.gif" width="200" style="float: left; padding: 0px 10px 20px 5px;" alt="CMU MLD Logo">
+		  <h1> 10-701: Introduction to Machine Learning</h1>
+		  <h3> Spring 2026</h3>
+		</div>
+	  </div>
+	  
+	  <div class="card" style="background-color: rgba(0, 0, 0, 0.05)" id="Home">
+	    <h1 class="card-header">Key Information and Links</h1>
+	    <div class="card-body">
+	      <table class="table table-borderless" style="font-size: 20px">
+    	  	<tr>
+    	  	  <td align="right" style="font-weight:bold">Instructors: </td>
+    	  	  <td><a href="https://www.cs.cmu.edu/~ggordon/" target="_blank" 
+    	  	  	  rel="noopener noreferrer">Geoff Gordon</a> and <a href="https://www.cs.cmu.edu/~pradeepr/" target="_blank" rel="noopener noreferrer">Pradeep Ravikumar</a></td>
+    	  	</tr>
+    	  	<tr>
+    	  	  <td align="right" style="font-weight:bold">Education Associate: </td>
+    	  	  <td><a href="mailto:jrast@andrew.cmu.edu">Jacob Rast</a></td>
+    	  	</tr>
+    	    <tr>
+    	  	  <td align="right" style="font-weight:bold">Announcements/Q&A: </td> 
+    	  	  <td>We will be using <a href="https://piazza.com/class/mk4jq6pjaam3hy"
+    	  	  	  target="_blank" rel="noopener noreferrer">Piazza</a> for making announcements 
+    	  	  	  and answering questions.</td>
+    	  	</tr>
+    	  	<tr>
+    	  	  <td align="right" style="font-weight:bold">Lectures: </td> 
+    	  	  <td>Mondays and Wednesdays from 2:00 PM to 3:20 PM (EST) in BH A36.
+    	  	      Lectures will be recorded for students to review after the fact;
+    	  	      the recordings will be hosted on  <a href="" target="_blank" rel="noopener noreferrer">TODO UPDATE THIS LINKS</a>.</td>
+    	    </tr>
+    	  	<tr>
+    	  	  <td align="right" style="font-weight:bold">In-class Polls: </td> 
+    	  	  <td>Some portion of your grade will be determined based on participation
+    	  	  	  in polls during lecture. These polls will be hosted on Google Forms.
+    	    </tr>
+    	  	<tr>
+    	  	  <td align="right" style="font-weight:bold">Recitations: </td> 
+    	  	  <td>Fridays from 2:00 PM to 3:20 PM (EST) in BH A36. Attendance at recitations 
+    	  	      is optional and therefore, outside of extraordinary circumstances, these will 
+    	  	      not be recorded. Recitation handouts can be found under the <a 
+    	  	      href="index.html#Recitations">Recitations</a> tab.</td>
+    	    </tr>
+    	    <tr>
+    	  	  <td align="right" style="font-weight:bold">Assignments: </td> 
+    	  	  <td>Homework handouts will be posted to the course website under the 
+    	  	  	  <a href="index.html#Homework">Assignments</a> tab. All code and
+    	  	  	  written responses should be submitted via
+    	  	  	  <a href="https://www.gradescope.com/courses/1213676" target="_blank" 
+    	  	  	  rel="noopener noreferrer">Gradescope</a>.</td>
+    	  	</tr>
+    	    <tr>
+    	  	  <td align="right" style="font-weight:bold">Office Hours: </td> 
+    	  	  <td>The time and location of office hours can be found on the 
+    	  	  	  <a href="index.html#Calendar">course calendar</a>.</td>
+    	  	</tr>
+    	  </table>	
+	    </div>
+	  </div>
+	</div>
+	
+	<br>
+	
+	<div class="container text" id="Syllabus">
+	  <h1>Syllabus</h1>
+	  <h3>1. Course Description</h3>
+	  <p>Machine learning studies the question: “how can we build adaptive algorithms 
+	  	 that automatically improve their performance on a given task as they acquire 
+	  	 more experience?” This can cover a wide array of technologies depending on 
+	  	 what sort of task we have in mind, and what we take to constitute experience. 
+	  	 Through this framing, we might view classical statistics problems, like 
+	  	 estimating the likelihood that a coin lands on heads as an ML problem: the task 
+	  	 is to produce an estimate, and the experience would consist of observations. 
+	  	 But ML can also include robotics challenges, where the experience is acquired 
+	  	 dynamically as our artificial agent interacts with the real world. Other grand 
+	  	 challenges in machine learning relate to personalized medicine, materials 
+	  	 discovery, and most recently generating media artifacts like images and text.</p>
+	  	 
+	  <p>This course is designed to give PhD students a solid foundation in the methods,
+	  	 mathematics, and algorithms of modern machine learning. Students entering the 
+	  	 class with a pre-existing working knowledge of probability, statistics and 
+	  	 algorithms will be at an advantage, but the class has been designed so that 
+	  	 anyone with a strong mathematical and computer science background can catch up 
+	  	 and fully participate. If you are interested in this topic, but are not a PhD 
+	  	 student, or are a PhD student not specializing in machine learning, you might 
+	  	 consider the master's level course on machine learning, 10-601. This class may 
+	  	 be appropriate for MS and undergraduate students who are interested in the 
+	  	 theory and algorithms behind machine learning.</p>
+	     
+	  <h5>Learning Outcomes</h5>
+	  <p>By the end of the course, students should be able to:</p>
+
+	  <ul>
+	  	<li>Have a deep understanding of the assumptions, derivation and usage of some 
+	  		of the most popular machine learning algorithms.</li>
+	    <li>Implement and analyze existing learning algorithms, including well-studied 
+	        methods for classification, regression, structured prediction, clustering, 
+	        and representation learning.</li>
+		<li>Integrate multiple facets of practical machine learning in a single system: 
+		    data preprocessing, learning, regularization and model selection.</li>
+		<li>Describe and derive the formal properties of models and algorithms for learning 
+		    and explain the practical implications of those results.</li>
+		<li>Compare and contrast different paradigms for learning (supervised, 
+		    unsupervised, etc...).</li>
+		<li>Design experiments to evaluate and compare different machine learning 
+		    techniques on real-world problems.</li>
+		<li>Employ probability, statistics, calculus, linear algebra, and optimization 
+			in order to develop new predictive models or learning methods.</li>
+		<li>Analyze the academic literature surrounding a recent area of research interest
+			in machine learning, draw connections to historical works and identify 
+			potential future lines of inquiry.</li>
+	  </ul>
+	  
+	  <h3>2. Prerequisites</h3>
+	  <p>Students entering the class are expected to have pre-existing working knowledge 
+	     in the following areas:</p>
+	     
+	  <ol>
+		<li><p>Significant experience <strong>programming</strong> in a general programming 
+			language. Specifically, you need to have written from scratch programs 
+			consisting of several hundred lines of code. For undergraduate students, 
+			this will be satisfied for example by having passed 15-122 (Principles of 
+			Imperative Computation) with a grade of ‘C’ or higher, or comparable courses 
+			or experience elsewhere.</p>
+			
+			<p>Note: For the programming components of our homework assignments, you will 
+			be required to use <strong>Python</strong>. You will be expected to know, or 
+			be able to quickly pick up, that programming language.</p></li>
+		<li>Basic familiarity with <strong>probability and statistics</strong>, as can be 
+			achieved at CMU by having passed 36-217 (Probability Theory and Random Processes),  
+			or 36-225 (Introduction to Probability and Statistics I), or 15-259, or 21-325, 
+			or comparable courses elsewhere, with a grade of ‘C’ or higher.</li>
+		<li>College-level maturity in <strong>discrete mathematics</strong>, as can be 
+			achieved at CMU by having passed 21-127 (Concepts of Mathematics), 21-128 
+			(Mathematical Concepts and Proofs), 15-151 (Mathematical Foundations for 
+			Computer Science) or comparable courses elsewhere, with a grade of ‘C’ or 
+			higher.</li>
+		<li>College-level maturity in <strong>calculus and linear algebra</strong>, as 
+			can be achieved at CMU by having passed 21-122 (Integration and Approximation), 
+			21-241 (Matrix Algebra), 21-242 (Matrix Theory) or comparable courses elsewhere, 
+			with a grade of ‘C’ or higher. </li>
+	  </ol>
+	  
+	  <p>You must strictly adhere to these pre-requisites! Even if CMU’s registration 
+	  	 system does not prevent you from registering for this course, it is still your
+	  	 responsibility to make sure you have all of these prerequisites before you 
+	  	 register.</p>
+	  	 
+	  <h3>3. Recommended Textbooks</h3>
+	  <p>This course does not exactly follow any one textbook. However, most lectures 
+	     will have some optional reading to help you better understand the material or 
+	     see a different presentation/perspective. We recommend you read these after 
+	     the corresponding lecture. These readings will typically be drawn from the 
+	     following texts, many of which are freely available online:</p>
+	     
+	  <ul>
+		<li><a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf"
+			target="_blank" rel="noopener noreferrer">Pattern Recognition and Machine 
+			Learning</a>; Christopher M. Bishop.</li>
+		<li><a href="http://ciml.info/" target="_blank" rel="noopener noreferrer">
+			A Course in Machine Learning</a>; Hal Daumé III.</li>
+		<li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mitchell/ftp/mlbook.html"
+			target="_blank" rel="noopener noreferrer">Machine Learning</a>; Tom Mitchell.</li>
+		<li><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991015155009704436"
+			target="_blank" rel="noopener noreferrer">Machine Learning: a Probabilistic 
+			Perspective</a>; Kevin P. Murphy.</li>
+		<li><a href="http://d2l.ai/" target="_blank" rel="noopener noreferrer">Dive into 
+			Deep Learning</a>; Aston Zhang, Zack C. Lipton, Mu Li, Alex J. Smola.</li>
+	  </ul>
+
+	  <p>The textbook below is a great resource for those hoping to brush up on the 
+	  	 prerequisite mathematics background for this course:</p>
+
+	  <ul>
+		<li><a href="https://mml-book.github.io/" target="_blank" rel="noopener noreferrer">
+			Mathematics for Machine Learning</a>, Marc Peter Deisenroth, A. Aldo Faisal, 
+			and Cheng Soon Ong.</li>
+	  </ul>
+	  
+	  <p>However, if you find yourself regularly and frequently referring to this textbook, 
+	  	 we strongly encourage you to consider whether or not you have the necessary 
+	  	 prerequisite knowledge to succeed in this course.</p>
+	  	 
+	  <h3>4. Assessments</h3>
+	  <p>Your grade in this course will consist of participation in lectures, 
+	  	 midterm and final exams, homework assignments and a class project. 
+	  	 The breakdown is as follows:</p>
+	  
+	  <ul>
+		<li>Participation = 5%</li>
+		<li>Midterm = 25%</li>
+		<li>Final = 25%</li>
+		<li>6 Homework Assignments = 21%</li>
+		<ul>
+		  <li>HW1 - HW4 = 4% Each</li>
+		  <li>HW5 - HW6 = 2.5% Each</li>
+	    </ul>
+		<li>4 Homework Quizzes = 4%</li>
+		<ul>
+		  <li>HW Quiz 1 - HW Quiz 4 = 1% Each</li>
+	    </ul>
+		<li>Project = 20%</li>
+	  </ul>
+	  
+	  <p>We will convert numerical course grades to letter grades based on grade 
+	  	 boundaries that are determined at the end of the semester. The following is
+	  	 a list of <strong>upper bounds</strong> on the grade cutoffs we will use;
+	  	 in all likelihood, these will be adjusted down at the end of the semester:</p>
+	  
+	  <ul>
+	  	<li>A+: ≥ 97%</li>
+		<li>A: ≥ 93%</li>
+		<li>A-: ≥ 90%</li>
+		<li>B+: ≥ 87%</li>
+		<li>B: ≥ 83%</li>
+		<li>B-: ≥ 80%</li>
+		<li>C+: ≥ 77%</li>
+		<li>C: ≥ 73%</li>
+		<li>C-: ≥ 70%</li>
+		<li>D+: ≥ 67%</li>
+		<li>D: ≥ 63%</li>	 
+		<li>R: < 63%</li>
+	  </ul>
+	  	  	
+	  <h5>Participation</h5>
+	  <p>We will be using Google Forms for in-class polls.</p>
+
+	  <p>You will always be allowed to submit multiple times so if there are multiple 
+	     questions during a lecture, you should submit multiple times. Your 
+	     participation grade will be based on the percentage of in-class polls 
+	     answered:</p>
+
+	  <ul>
+	  	<li>5% for 80% or greater poll participation.</li>
+		<li>3% for 65%-80% poll participation.</li>
+		<li>1% for 50%-65% poll participation.</li>
+	  </ul>
+	  
+	  <p>The correctness of your responses will not be taken into account when computing
+	  	 participation grades, all that matters is that you submit something. <strong> 
+		you must submit your responses to participation polls within 48 hours of the start of lecture.
+	    </strong> You are free to submit the participation poll at any time during this 48-hour period, 
+		including after the lecture ends, for example if you choose to watch the lectures asynchronously.</p>
+	  	  
+	  <h5>Midterm and Final Exams</h5>
+	  <p>Unless otherwise noted, all exams for this course will be closed notes; you may 
+	  	 bring one sheet of A4 paper as a cheatsheet (both back and front may be used). 
+	  	 You are encouraged to handwrite this cheatsheet as a form of preparing for the 
+	  	 exam but you may typeset them if you so choose.</p>
+
+	  <p>The first exam will take place on TODO UPDATE THIS DATE. The second exam will take place 
+		 during the finals period and will be scheduled by the registrar. Please plan 
+		 your travel accordingly as we will not be able accommodate individual travel 
+		 needs (e.g., by offering the exam early). If you have an unavoidable conflict 
+		 with either exam (e.g., an exam in another course), notify us by making a 
+		 private post on <a href="https://piazza.com/class/mk4jq6pjaam3hy#" target="_blank" 
+		 rel="noopener noreferrer">Piazza</a>.</p>
+	  	  
+	  <h5>Homework Assignments</h5>
+	  <p>The homework assignments will be divided into two components: programming and 
+	  	 written; most assignments will have both components but HW5 and HW6 will be 
+	  	 written only assignments. The programming portions will ask you to implement 
+	  	 machine learning algorithms from scratch; they emphasize understanding of 
+	  	 real-world applications of machine learning, building end-to-end systems, and 
+	  	 experimental design. The written portions will focus on core concepts, 
+	  	 “on-paper” implementations of classic learning algorithms, derivations, and 
+	  	 understanding of theory. All programming must be completed in Python.</p>
+
+		<h5>Homework Quizzes</h5>
+		<p>In order to provide insentive against excessive use of generative AI, all homeworks
+			with programming assignments (Homework 1 - Homework 4) will be accompanied by a corresponding homework quiz.
+		These homework quizzes are intended to be lightweight and relatively low-stakes; they will be just 30 minutes long 
+		and should be possible to complete within 15 minutes. The questions asked are designed to determine if you are meeting 
+		the learning objectives of concepts presented in homework assignments. These quizzes will therefore ideally be easy if you have properly 
+		worked through the material and difficult or impossible if you have not.</p>
+ 
+	  <h5>Project</h5>
+	  <p>The course project is an opportunity for you to implement, explore and go beyond 
+	     the methods presented in class applied to a real-world problem/research area. 
+	     You will be given a small list of topics to choose from and will work in groups 
+	     of 2 or 3; you may not work by yourself on the project.</p>
+
+	  <p>There will be three deliverables associated with the project:</p>
+
+	  <ul>
+	  	<li>A two-page first check-in detailing the topic your group will focus on, what method
+	  		or methods you will implement, and the metrics you will use to compare them 
+	  		(if applicable). This check-in will largely be graded on completion; their primary 
+	  		purpose is for us to catch and correct any early misconceptions about the 
+	  		project task/scope. The check-in is worth 2% of your final grade.</li>
+		<li>A four-page second check-in describing the work done to date and any modifications to 
+			the proposed plan as well as the rationale behind them. The second check-in should include 
+			preliminary results and analysis. Again, these will largely be graded on 
+			completion. The check-in is worth 2% of your final grade.</li>
+		<li>An 8-page final report that describes the entirety of the work done for the 
+			project. More details about what precisely is expected in the final reports 
+			will be made available closer to the deadline. The final report is worth 16% 
+			of your final grade.</li>
+	  </ul>
+
+	  <h3>5. Office Hours</h3>
+	  <p>The schedule of office hours will always appear on the <a href="index.html#Calendar">
+	  	 course calendar</a>. In general, we will endeavor to hold a minimum of 6 office 
+	  	 hours per week, with more in the week leading up to an exam.</p>
+	  	 
+	  <p>We will make use of the following (informal) rules:</p>
+	  
+	  <ul>
+	    <li><strong>10 Minute Rule:</strong> Each student’s question will be addressed 
+	    	by a course staff member for at most 10 minutes. The only exception to this 
+	    	will be if the question has broad interest to many other students.</li>
+		<li><strong>The Pseudo Code Rule:</strong> This is not a programming course; 
+			you are expected to know how to debug code. As such, if your question is of 
+			the form "Could you help me to debug my code?", you must bring with you 
+			detailed pseudocode that describes your implementation design. If you do not 
+			have pseudocode, the course staff member will not look at your code, but 
+			instead ask you to sketch out pseudocode at the chalkboard and discuss there 
+			instead. After discussing at a high-level, if your 10 minutes have not expired, 
+			the course staff member may have time to look at your code.</li>
+	  </ul>
+	  
+	  <p>While you're awaiting your turn, we encourage you to listen in to the answers 
+	  	 to any publicly answered questions. Please be courteous and allow the student 
+	  	 who posed the question to primarily direct the discussion. We also encourage 
+	  	 you to collaborate with others (following our collaboration policies below) 
+	  	 while waiting.</p>
+	  
+	  <h3>6. General Policies</h3>
+	  <h5>Late homework policy</h5>
+	  <p>You have a total of 6 grace days for use on any homework assignment. We will 
+	     automatically keep a tally of these grace days for you; they will be applied 
+	     greedily. You may not use more than 2 grace days on any single assignment. 
+	     Submitting a homework late when you are out of grace days will result in the 
+	     following penalties:</p>
+
+	  <ul>
+	  	<li>Submissions between 0 and 24 hours late will receive 75% credit.</li>
+		<li>Submissions between 24 and 48 hours late will receive 50% credit.</li>
+	  </ul>
+	  
+	  <p> Grace days may only be applied to homeworks. Grace days may not be used on 
+		project deliverables. You may not combine grace days and late penalties to submit 
+		more than 48 hours late; Any homework submitted more than 48 hours late will receive
+		 a score of 0.</p>
+	  
+	  <h5>Extensions</h5>
+	  <p>In general, we do not grant extensions on assignments. There are several 
+	     exceptions:</p>
+	  
+	  <ul>
+	    <li><strong>Medical Emergencies:</strong> If you are sick and unable to complete 
+	    	an assignment or attend class, please go to University Health Services. 
+	    	For minor illnesses, we expect grace days or our late penalties to provide 
+	    	sufficient accommodation. For medical emergencies (e.g., prolonged 
+	    	hospitalization), students may request an extension afterwards.</li>
+		<li><strong>Family/Personal Emergencies:</strong> If you have a family emergency 
+			(e.g., death in the family) or a personal emergency (e.g., mental health 
+			crisis), please contact your academic adviser and/or Counseling and 
+			Psychological Services (CaPS).</li>
+		<li><strong>University-Approved Travel:</strong> If you are traveling out-of-town 
+			to a university approved event or an academic conference, you may request an 
+			extension for any time lost due to traveling. For university approved 
+			absences, you must provide confirmation of attendance, usually from a 
+			faculty or staff organizer of the event or via travel/conference receipts.</li>
+	  </ul>
+	  
+	  <p>For any of the above situations, you may request an extension by emailing Jacob
+	  	 at <a href="mailto:jrast@andrew.cmu.edu">jrast@andrew.cmu.edu</a> – 
+	  	 <strong>do not email the instructor or TAs.</strong> Please be specific about 
+	  	 which assessment(s) you are requesting an extension for and the number of hours 
+	  	 requested. The email should be sent as soon as you are aware of the conflict
+	  	 and at least 24 hours prior to the deadline. In the case of an emergency, 
+	  	 no notice is needed.</p>
+
+	  <p>If this is a medical emergency or mental health crisis, you must also CC your 
+	     CMU college liaison and/or your academic advisor. Do not submit any medical 
+	     documentation to the course staff. If necessary, your college liaison and 
+	     The Division of Student Affairs (DoSA) will request such documentation and 
+	     they will view the health documentation and conclude whether a retroactive 
+	     extension is appropriate. If you haven’t interacted with your college liaison 
+	     before, they are experienced student affairs staff who work in partnership 
+	     with students, housefellows, advisors, faculty, and associate deans in each 
+	     college to assure support for students regarding their overall Carnegie Mellon 
+	     experience.</p>
+
+	  <h5>Audit Policy</h5>
+	  <p>Formal auditing of this course is permitted. You must follow the official 
+	     procedures for a course audit as outlined by the HUB/registrar. Please do not 
+	     email the instructor requesting permission to audit. Instead, you should first 
+	     register for the appropriate section. Next fill out the 
+	     <a href="https://www.cmu.edu/hub/docs/course-audit.pdf" target="_blank" 
+	     rel="noopener noreferrer">Course Audit Approval form</a>, obtain your academic 
+	     advisor's signature and then approach the instructor in-person immediately 
+	     after lecture to obtain their signature.</p>
+
+	  <p>Auditors are required to:</p>
+
+	  <ul>
+		<li>Attend or watch all of the lectures.</li>
+		<li>Receive a 65% participation grade or higher.</li>
+		<li>Submit at least 3 of the 6 homework assignments, at least one of which must be submitted after the midterm</li>
+		<li>Auditors are encouraged to sit for the exams, but should only do so if 
+			they plan to put forth actual effort in solving them.</li>
+		<li>Auditors should not complete a course project unless they clearly 
+			communicate their status as an auditor to their group members and all other
+			group members agree to work with them.</li>
+	  </ul>
+	  
+	  <h5>Pass/Fail Policy</h5>
+	  <p>You are allowed to take this course as Pass/Fail; instructor permission is not 
+	     required. What letter grade is the cutoff for a Pass will depend on your 
+	     specific program; we do not specify whether or not you Pass but rather we 
+	     compute your letter grade the same as everyone else in the class and your 
+	     program converts that letter grade to a Pass or Fail depending on their 
+	     cutoff. Be sure to check with your program/department as to whether you can 
+	     count a Pass/Fail course towards your degree requirements.</p>
+
+	  <h5>Accommodations for Students with Disabilities</h5>
+	  <p>If you have a disability and have an accommodations letter from the Disability 
+	     Resources office, please email Jacob at <a href="mailto:jrast@andrew.cmu.edu">
+	     jrast@andrew.cmu.edu</a> to set up a meeting for the purposes of discussing 
+	     your accommodations and needs as early in the semester as possible. He will 
+	     work with you to ensure that accommodations are provided as appropriate. If you 
+	     suspect that you may have a disability and would benefit from accommodations 
+	     but are not yet registered with the Office of Disability Resources, I encourage 
+	     you to contact them at <a href="mailto:access@andrew.cmu.edu">
+	     access@andrew.cmu.edu</a>.</p>
+
+	  <h3>7. Technologies</h3>
+	  <p>We will use a variety of technologies throughout the course:</p>
+
+	  <ul>
+	    <li><a href="https://piazza.com/class/mk4jq6pjaam3hy#" target="_blank" 
+	    	rel="noopener noreferrer">Piazza</a>: we will use Piazza for all course discussion. 
+	    	Questions about homeworks, course content, logistics, etc. should all be 
+	    	directed to Piazza. If you have a question, chances are several others had the 
+	    	same question. By posting your question publicly, the course staff can answer 
+	    	once and everyone benefits. If you have a private question, you should also 
+	    	use Piazza as it will likely receive a faster response.</li>
+		<li><p><a href="https://www.gradescope.com/courses/1213676" target="_blank" 
+			rel="noopener noreferrer">Gradescope</a>: we will use Gradescope to collect PDF 
+			submissions of the homework assignments as well as any code you write to complete
+			the assignments. The course staff will grade your submissions, and you’ll receive 
+			personalized feedback explaining the grades you receive.</p>
+			
+			<p>If you believe an error was made during grading, you will be able to submit 
+			a regrade request on Gradescope. For each homework assignment, regrade requests 
+			will be open for only 1 week after the grades have been published. This is to 
+			encourage you to check the feedback you’ve received early!</p></li>
+		<li><p><a href="https://docs.google.com/forms" target="_blank" 
+			rel="noopener noreferrer">Google Forms</a>: we will use Google Forms to collect 
+			feedback and responses to polls during lecture. These polls will be hosted on 
+			Google Forms.</p></li>
+		<li><p><a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=cc2bc5c0-ecd9-46b8-98db-b341012e3f06" target="_blank" 
+			rel="noopener noreferrer">Panopto TODO UPDATE THIS LINK</a>: Lecture recordings can be found on Panopto</p></li>
+	  </ul>	
+
+	  <h3>8. Collaboration and Academic Integrity</h3>
+	  <h4>Read this section carefully!</h4>
+
+	  <h5>Collaboration among Students</h5>
+	  <p>The purpose of student collaboration is to facilitate learning, not to 
+	     circumvent it. Studying the material in groups is strongly encouraged. You are 
+	     also allowed to seek help from other students in understanding the material 
+	     needed to solve a particular homework problem, provided any written notes 
+	     (including code) are taken on an impermanent surface (e.g., whiteboard, 
+	     chalkboard), and provided learning is facilitated, not circumvented. The actual 
+	     solution must be written by each student alone.</p>
+	     
+	  <p>A good method to follow when collaborating is to meet with your peers, discuss 
+	     ideas at a high level, but do not copy down any notes from each other or from 
+	     a shared work surface. Any scratch work done at this time should be your own only. 
+	     Before writing the assignment solutions, you should make sure that you are 
+	     doing this without anyone else present, putting all notes away, closing all 
+	     tabs on your computer, and writing it completely by yourself with no other 
+	     resources.</p>
+	     
+	  <p>You are absolutely not allowed to share/compare answers or screen share your 
+	     work with one another.</p>
+
+	  <p>The presence or absence of any form of help or collaboration, whether given 
+	     or received, must be explicitly stated and disclosed in full by all involved. 
+	     Specifically, each assignment solution must include answers to the following 
+	     questions:</p>
+	     
+	  <ol>
+		<li>Did you receive any help whatsoever from anyone in solving this assignment? 
+			Yes / No.</li>
+		<ul>
+		  <li>If you answered ‘yes’, give full details: ____________</li>
+		  <li>(e.g., "Jane Doe explained to me what is asked in Question 3.4")</li>
+		</ul>
+		<li>Did you give any help whatsoever to anyone in solving this assignment? 
+			Yes / No.</li>
+		<ul>
+		  <li>If you answered ‘yes’, give full details: _____________</li>
+		  <li>(e.g., "I pointed Joe Smith to section 2.3 since he didn’t know how to 
+		  	  proceed with Question 2")</li>
+		</ul>
+		<li>Did you find or come across code that implements any part of this assignment?
+			Yes / No. (See below policy on "found code")</li>
+		<ul>
+		  <li>If you answered ‘yes’, give full details: _____________</li>
+		  <li>(book & page, URL & location within the page, etc.).</li>
+	  </ol>
+	  
+	  <p>If you gave help after turning in your own assignment and/or after answering 
+	  	 the questions above, you must update your answers before the assignment’s 
+	  	 deadline, if necessary by emailing the course staff.</p>
+
+	  <p><strong>Collaboration without full disclosure will be handled severely, in 
+	     compliance with CMU’s Policy on <a href="https://www.cmu.edu/policies/student-and-student-life/academic-integrity.html" 
+	     target="_blank" rel="noopener noreferrer">Academic Integrity</a>.</strong></p>
+	     
+	  <h5>Previously Used Assignments</h5>
+	  <p>Some of the homework assignments used in this class may have been used in prior 
+	  	 offerings, in classes at other institutions, or elsewhere. Solutions to them 
+	  	 may be, or may have been, available online, or from other people or sources. 
+	  	 It is explicitly forbidden to use any such sources, or to consult people who 
+	  	 have solved these problems before. It is explicitly forbidden to search for 
+	  	 these problems or their solutions on the internet. You must complete the homework
+	  	 assignments completely on your own. We will be actively monitoring your 
+	  	 compliance. Collaboration with other students who are currently taking the class 
+	  	 is allowed, but only under the conditions stated above.</p>
+	  	 
+	  <h5>AI Assistance</h5>
+	  <p>To best support your own learning, you should complete all graded assignments in 
+	     this course yourself. We strongly suggest that you refrain from using AI tools to generate any content (text, 
+	     video, audio, images, code, etc.) for an assessment. However, students are allowed to consult with AI chatbots 
+		 provided that they do not do so while activley working on a course deliverable. There should never be a situtaion while your assignement 
+		is open at the same time as any chatbot. In this regard, you should treat an AI the same way as any other collaborator or internet reference and divulge usage
+		in the collaboration section of your homework.</p>
+	
+		
+		<p></p>Unlimited use of AI assistants on coding sections of the course project (but not written reports!) is permitted and encouraged.</p>
+	  
+	  <h5>Policy Regarding "Found Code"</h5>
+	  <p>You are encouraged to read books and other instructional materials, both online 
+	     and offline, to help you understand the concepts and algorithms taught in class. 
+	     These materials may contain example code or pseudocode, which may help you 
+	     better understand an algorithm or an implementation detail. However, when you 
+	     implement your own solution to an assignment, you must put all materials aside, 
+	     and write your code completely on your own, starting "from scratch". 
+	     Specifically, you may not use any code you found or came across. If you find 
+	     or come across code that implements any part of your assignment, you must 
+	     disclose this fact in your collaboration statement.</p>
+
+	  <h5>Duty to Protect One’s Work</h5>
+	  <p>Students are responsible for proactively protecting their work from copying 
+	     and misuse by other students. If a student’s work is copied by another student, 
+	     the original author is also considered to be in violation of the course 
+	     policies. It does not matter whether the author allowed the work to be copied 
+	     or was merely negligent in preventing it from being copied. When overlapping 
+	     work is submitted by different students, both students will be punished.</p>
+
+	  <p>To protect future students, do not post your solutions publicly, neither during 
+	  	 the course nor afterwards.</p>
+
+	  <h5>Penalties for Violations of Course Policies</h5>
+	  <p>All violations of course policies (even the first one) will always be reported 
+	     to the university authorities (your department head, associate dean, the dean of 
+	     Student Affairs, etc.) as an official Academic Integrity Violation and will 
+	     carry severe penalties.</p>
+
+	  <ol>
+	    <li>The penalty for the first violation is a negative 100% on the assignment i.e., 
+	        it would have been better to submit nothing and receive a 0%.</li>
+		<li>The penalty for the second violation is failure in the course, and can even 
+			lead to dismissal from the university.</li>
+	  </ol>
+	  
+	  <h3>9. Support</h3>
+	  <p>Take care of yourself. Do your best to maintain a healthy lifestyle by eating 
+	     well, exercising, avoiding drugs and alcohol, getting enough sleep and taking 
+	     some time to relax. This will help you achieve your goals and cope with stress.</p>
+
+	  <p>All of us benefit from support during times of struggle. You are not alone. 
+	     There are many helpful resources available on campus and an important part of 
+	     the college experience is learning how to ask for help. Asking for support 
+	     sooner rather than later is often helpful.</p>
+
+	  <p>If you or anyone you know experiences any academic stress, difficult life 
+	     events, or feelings like anxiety or depression, we strongly encourage you to 
+	     seek support. Counseling and Psychological Services (CaPS) is here to help: 
+	     call 412-268-2922 and visit their website at 
+	     <a href="http://www.cmu.edu/counseling/" target="_blank" rel="noopener noreferrer">
+	     http://www.cmu.edu/counseling/</a>.</p>
+
+	  <p>If you or someone you know is feeling suicidal or in danger of self-harm, call 
+	     someone immediately, day or night:</p>
+	
+	  <ul>
+	  	<li>CaPS: 412-268-2922</li>
+		<li>Re:solve Crisis Network: 888-796-8226</li>
+		<li>If the situation is life threatening, call the police:</li>
+		<ul>
+		  <li>On campus: CMU Police: 412-268-2323</li>
+		  <li>Off campus: 911</li>
+		</ul>
+	  </ul>
+
+	  <h3>10. Diversity</h3>
+	  <p>We must treat every individual with respect. We are diverse in many ways, and 
+	     this diversity is fundamental to building and maintaining an equitable and 
+	     inclusive campus community. Diversity can refer to multiple ways that we 
+	     identify ourselves, including but not limited to race, color, national origin, 
+	     language, sex, disability, age, sexual orientation, gender identity, religion, 
+	     creed, ancestry, belief, veteran status, or genetic information. Each of these 
+	     diverse identities, along with many others not mentioned here, shape the 
+	     perspectives our students, faculty, and staff bring to our campus. We, at CMU, 
+	     will work to promote diversity, equity and inclusion not only because diversity 
+	     fuels excellence and innovation, but because we want to pursue justice. We 
+	     acknowledge our imperfections while we also fully commit to the work, inside 
+	     and outside of our classrooms, of building and sustaining a campus community 
+	     that increasingly embraces these core values.</p>
+
+	  <p>Each of us is responsible for creating a safer, more inclusive environment.</p>
+
+	  <p>Unfortunately, incidents of bias or discrimination do occur, whether intentional 
+	     or unintentional. They contribute to creating an unwelcoming environment for 
+	     individuals and groups at the university. Therefore, the university encourages 
+	     anyone who experiences or observes unfair or hostile treatment on the basis of 
+	     identity to speak out for justice and support, within the moment of the incident 
+	     or after the incident has passed. Anyone can share these experiences using the 
+	     following resources:</p>
+	
+	  <ul>
+		<li>Center for Student Diversity and Inclusion: <a href="mailto:csdi@andrew.cmu.edu">
+			csdi@andrew.cmu.edu</a>, 412-268-2150</li>
+		<li>Ethics Reporting Hotline. Students, faculty, and staff can anonymously file a 
+			report by calling 844-587-0793 or visiting <a href="http://cmu.ethicspoint.com" 
+			target="_blank" rel="noopener noreferrer">cmu.ethicspoint.com</a>.</li>
+		<ul>
+		  <li>username: tartans</li>
+		  <li>password: plaid</li>
+		</ul>
+	  </ul>
+	  
+	  <p>All reports will be documented and deliberated to determine if there should be 
+	     any following actions. Regardless of incident type, the university will use all 
+	     shared experiences to transform our campus climate to be more equitable and 
+	     just.</p>
+	</div>
+	
+	<br>
+	
+	<div class="container text" id="Staff">
+	  <h1>Staff</h1>
+	  <h3>Instructor</h3>
+	  <div class="row">
+	  	<div class="col-lg-6">
+  	  	  <h5><a href="https://www.cs.cmu.edu/~gg25" target="_blank" rel="noopener noreferrer">Geoff Gordon</a></h5>
+		  <p>OH: TBD</p>
+		</div>
+		<div class="col-lg-6">
+			<h5><a href="https://www.cs.cmu.edu/~pradeepr" target="_blank" rel="noopener noreferrer">Pradeep Ravikumar</a></h5>
+			<p>OH: TBD</p>
+		</div>
+	  </div>
+	  <div class="row">
+	  	<div class="col-lg-6">
+  	  	  <img src="staff/gg25.jpg" width="200" style="float: left; border-radius: 6px" alt="Geoff Gordon">
+		</div>
+		<div class="col-lg-6">
+  	  	  <img src="staff/pradeepr.jpg" width="200" style="float: left; border-radius: 6px" alt="Pradeep Ravikumar">
+		</div>
+	  </div>
+	  <br>
+	  <h3>Education Associate</h3>
+	  <h5><a href="mailto:jrast@andrew.cmu.edu">Jacob Rast</a></h5>
+	  <p>OH: TBD</p>
+	  <div class="row">
+	  	<div class="col-lg-12">
+  	  	  <img src="staff/jrast.jpg" width="200" style="float: left; border-radius: 6px" alt="Jacob">
+		</div>
+	  </div>
+	  <br>
+	  <h3>Teaching Assistants</h3>
+	  <div class="row">
+		<div class="col-lg-3">
+  	  	  <h5>TBD</h5>
+	  	</div>
+	  	<div class="col-lg-3">
+  	  	  <h5>TBD</h5>
+	  	</div>
+	  	<div class="col-lg-3">
+  	  	  <h5>TBD</h5>
+	  	</div>
+	  	<div class="col-lg-3">
+  	  	  <h5>TBD</h5>
+	  	</div>
+	  </div>
+	  <div class="row">
+		<div class="col-lg-3">
+  	  	  <img src="staff/placeholder.png" width="200" style="float: left; border-radius: 6px" alt="TODO NAME">
+	  	</div>
+	  	<div class="col-lg-3">
+  	  	  <img src="staff/placeholder.png" width="200" style="float: left; border-radius: 6px" alt="TODO NAME">
+		</div>
+	  	<div class="col-lg-3">
+  	  	  <img src="staff/placeholder.png" width="200" style="float: left; border-radius: 6px" alt="TODO NAME">
+		</div>
+	  	<div class="col-lg-3">
+		   <img src="staff/placeholder.png" width="200" style="float: left; border-radius: 6px" alt="TODO NAME">
+	  	</div>
+	  </div>
+	  <br>
+	  <div class="row">
+	  	<div class="col-lg-3">
+  	  	  <h5>TBD</h5>
+	  	</div>
+	  	<div class="col-lg-3">
+  	  	  <h5>TBD</h5>
+	  	</div>
+		<div class="col-lg-3">
+  	  	  <h5>TBD</h5>
+	  	</div>
+	  </div>
+	  <div class="row">
+	  	<div class="col-lg-3">
+  	  	  <img src="staff/placeholder.png" width="200" style="float: left; border-radius: 6px" alt="TODO NAME">
+		</div>
+	  	<div class="col-lg-3">
+  	  	  <img src="staff/placeholder.png" width="200" style="float: left; border-radius: 6px" alt="TODO NAME">
+		</div>
+	  	<div class="col-lg-3">
+  	  	  <img src="staff/placeholder.png" width="200" style="float: left; border-radius: 6px" alt="TODO NAME">
+		</div>
+	  </div>
+	</div>
+	
+	<br>
+	
+	<div class="container text" id="Schedule">
+	  <h1>Schedule</h1>
+	  <p>Lectures are the primary mode of content delivery in this course. Attending 
+	  	 lectures is highly recommended; there will be regular in-class activities and 
+	  	 polls which will constitute a small portion of your final grade. Engaging in 
+	  	 these real-time activities can greatly improve your understanding of the material. 
+	  	 Lectures will be recorded and made available to you after the fact. However, the 
+	  	 primary purpose of these recordings is to allow you to refer back to the content; 
+	  	 watching recordings in lieu of attending lectures is not encouraged.</p>
+	  	 
+	  <table class="table table-hover">
+	    <thead>
+	      <tr>
+	      	<th>Date</th>
+	      	<th>Topic</th>
+	      	<th>Slides</th>
+	      	<th>Readings/Resources</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	      	<td>Mon, Jan. 12</td>
+	      	<td>Introduction</td>
+	      	<td>Lecture 1</td>
+	      	<td></td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Wed, Jan. 14</td>
+	      	<td>Decision Trees</td>
+	      	<td>Lecture 2</td>
+	      	<td><!--<a href="https://www.cs.cmu.edu/~tom/files/MachineLearningTomMitchell.pdf" target="_blank" rel="noopener noreferrer">Mitchell, Chapter 3</a>
+	      		<br> 
+	      		<a href="http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf" target="_blank" rel="noopener noreferrer">Daumé III, Chapter 1</a>--></td>
+	      </tr>
+	      <tr style="background-color: rgba(131,36,35,0.2)">
+	      	<td>Mon, Jan. 19</td>
+	      	<td>No Class (MLK Day)</td>
+	      	<td></td>
+	      	<td></td>
+	      </tr>
+	      <tr>
+	      	<td>Wed, Jan. 21</td>
+	      	<td>KNNs and Model Selection</td>
+	      	<td>Lecture 3</td>
+	      	<td><!--<a href="https://www.cs.cmu.edu/~tom/files/MachineLearningTomMitchell.pdf" target="_blank" rel="noopener noreferrer">Mitchell, Sections 8.1 - 8.2</a>
+	      		<br> 
+	      		<a href="http://ciml.info/dl/v0_99/ciml-v0_99-ch03.pdf" target="_blank" rel="noopener noreferrer">Daumé III, Chapter 3</a>--></td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Mon, Jan. 26</td>
+	      	<td>Linear Regression</td>
+	      	<td>Lecture 4</td>
+	      	<td><!--<a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991015155009704436" target="_blank" rel="noopener noreferrer">Murphy, Sections 7.1 - 7.3</a>--></td>
+	      </tr>
+	      <tr>
+	      	<td>Wed, Jan. 28</td>
+	      	<td>MLE/MAP</td>
+	      	<td>Lecture 5</td>
+	      	<td><!--<a href="http://www.cs.cmu.edu/~tom/mlbook/Joint_MLE_MAP.pdf" target="_blank" rel="noopener noreferrer">Mitchell, Estimating Probabilities</a>--></td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Mon, Feb. 2</td>
+	      	<td>Naive Bayes</td>
+	      	<td>Lecture 6</td>
+	      	<td><!--<a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991015155009704436" target="_blank" rel="noopener noreferrer">Murphy, Section 3.5</a>--></td>
+	      </tr>
+	      <tr>
+	      	<td>Wed, Feb. 4</td>
+	      	<td>Logistic Regression</td>
+	      	<td>Lecture 7</td>
+	      	<td><!--<a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991015155009704436" target="_blank" rel="noopener noreferrer">Murphy, Sections 8.1 - 8.3</a>--></td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Mon, Feb. 9</td>
+	      	<td>Regularization</td>
+	      	<td>Lecture 8</td>
+	      	<td><!--<a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991015155009704436" target="_blank" rel="noopener noreferrer">Murphy, Sections 7.5 & 14.4</a>--></td>
+	      </tr>
+	      <tr>
+	      	<td>Wed, Feb. 11</td>
+	      	<td>Neural Networks</td>
+	      	<td>Lecture 9</td>
+	      	<td><!--<a href="http://www.cs.cmu.edu/~tom/files/MachineLearningTomMitchell.pdf" target="_blank" rel="noopener noreferrer">Mitchell, Chapter 4.1 - 4.6</a>
+	      		<br> 
+	      		<a href="https://d2l.ai/chapter_multilayer-perceptrons/index.html" target="_blank" rel="noopener noreferrer">Zhang, Lipton, Li & Smola, Chapter 5.1 - 5.3</a>--></td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Mon, Feb. 16</td>
+	      	<td>Backpropagation</td>
+	      	<td>Lecture 10</td>
+	      	<td></td>
+	      </tr>
+	      <tr>
+	      	<td>Wed, Feb. 18</td>
+	      	<td>CNNs</td>
+	      	<td>Lecture 11</td>
+	      	<td><!--<a href="https://d2l.ai/chapter_convolutional-neural-networks/index.html" target="_blank" rel="noopener noreferrer">Zhang, Lipton, Li & Smola, Chapter 7</a>--></td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Mon, Feb. 23</td>
+	      	<td>RNNs</td>
+	      	<td>Lecture 12</td>
+	      	<td><!--<a href="https://d2l.ai/chapter_convolutional-neural-networks/index.html" target="_blank" rel="noopener noreferrer">Zhang, Lipton, Li & Smola, Chapters 9 & 10.1</a>--></td>
+	      </tr>
+	      <tr style="background-color: rgba(117, 154, 171, 0.2)">
+	      	<td>Wed, Feb. 25</td>
+	      	<td>Midterm</td>
+	      	<td></td>
+	      	<td></td>
+	      </tr>
+	      <tr style="background-color: rgba(131,36,35,0.2)">
+	      	<td>Mon, Mar. 2</td>
+	      	<td>No Class (Spring Break)</td>
+	      	<td></td>
+	      	<td></td>
+	      </tr>
+	      <tr style="background-color: rgba(131,36,35,0.2)">
+	      	<td>Wed, Mar. 4</td>
+	      	<td>No Class (Spring Break)</td>
+	      	<td></td>
+	      	<td></td>
+	      </tr>
+	      <tr>
+	      	<td>Mon, Mar. 9</td>
+	      	<td>Attention and Transformers</td>
+	      	<td>Lecture 13</td>
+	      	<td><!--<a href="https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html" target="_blank" rel="noopener noreferrer">Zhang, Lipton, Li & Smola, Chapter 11</a>--></td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Wed, Mar. 11</td>
+	      	<td>Clustering and Dimensionality Reduction</td>
+	      	<td>Lecture 14</td>
+	      	<td><!--<a href="http://ciml.info/dl/v0_99/ciml-v0_99-ch03.pdf" target="_blank" rel="noopener noreferrer">Daumé III, Chapter 15</a>
+	      		<br>
+	      		<a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991015155009704436" target="_blank" rel="noopener noreferrer">Murphy, Sections 11.1 - 11.4.2</a>
+	      		<a href="http://ciml.info/dl/v0_99/ciml-v0_99-ch03.pdf" target="_blank" rel="noopener noreferrer">Daumé III, Chapter 15</a>
+	      		<a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991015155009704436" target="_blank" rel="noopener noreferrer">Murphy, Sections 12.2.1 - 12.2.3</a>--></td>
+	      </tr>
+	      <tr>
+	      	<td>Mon, Mar. 16</td>
+	      	<td>Reinforcement Learning: Value and Policy Iteration</td>
+	      	<td>Lecture 15</td>
+	      	<td><!--<a href="https://www.cs.cmu.edu/~tom/files/MachineLearningTomMitchell.pdf" target="_blank" rel="noopener noreferrer">Mitchell, Chapter 13</a>--></td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Wed, Mar. 18</td>
+	      	<td>Reinforcement Learning: Q-Learning and Deep RL</td>
+	      	<td>Lecture 16</td>
+	      	<td><!--<a href="https://www.cs.cmu.edu/~tom/files/MachineLearningTomMitchell.pdf" target="_blank" rel="noopener noreferrer">Mitchell, Chapter 13</a>--></td>
+	      </tr>
+	      <tr>
+	      	<td>Mon, Mar. 23</td>
+	      	<td>Pretraining, Fine-tuning, and ICL</td>
+	      	<td>Lecture 17</td>
+	      	<td></td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Wed, Mar. 25</td>
+	      	<td>Learning Theory 1</td>
+	      	<td>Lecture 18</td>
+	      	<td><!--<a href="http://www.cs.cmu.edu/~tom/files/MachineLearningTomMitchell.pdf" target="_blank" rel="noopener noreferrer">Mitchell, Chapter 7.1 - 7.3</a>--></td>
+	      </tr>
+	      <tr>
+	      	<td>Mon, Mar. 30</td>
+	      	<td>Learning Theory 2</td>
+	      	<td>Lecture 19</td>
+	      	<td><!--<a href="http://www.cs.cmu.edu/~tom/files/MachineLearningTomMitchell.pdf" target="_blank" rel="noopener noreferrer">Mitchell, Chapter 7.4</a>--></td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Wed, Apr. 1</td>
+	      	<td>Bagging</td>
+	      	<td>Lecture 20</td>
+	      	<td></td>
+	      </tr>
+	      <tr>
+	      	<td>Mon, Apr. 6</td>
+	      	<td>Boosting</td>
+	      	<td>Lecture 21</td>
+	      	<td></td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Wed, Apr. 8</td>
+	      	<td>SVMs</td>
+	      	<td>Lecture 22</td>
+	      	<td></td>
+	      </tr>
+	      <tr style="background-color: rgba(131,36,35,0.2)">
+	      	<td>Fri, Apr. 10</td>
+	      	<td>No Class (Spring Carnival)</td>
+	      	<td></td>
+	      	<td></td>
+	      </tr>
+	      <tr>
+	      	<td>Mon, Apr. 13</td>
+	      	<td>Algorithmic Bias</td>
+	      	<td>Lecture 23</td>
+	      	<td></td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Wed, Apr. 15</td>
+	      	<td>Kernels and GPs</td>
+	      	<td>Lecture 24</td>
+	      	<td><!--<a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991015155009704436" target="_blank" rel="noopener noreferrer">Murphy, Sections 14.1 - 14.5</a>--></td>
+	      </tr>
+	      <tr>
+	      	<td>Mon, Apr. 20</td>
+	      	<td>Advanced Topics 1</td>
+	      	<td>Lecture 25</td>
+	      	<td></td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Wed, Apr. 22</td>
+	      	<td>Advanced Topics 2</td>
+	      	<td>Lecture 26</td>
+	      	<td></td>
+	      </tr>
+	      <tr style="background-color: rgba(117, 154, 171, 0.2)">
+	      	<td>TBD</td>
+	      	<td>Final</td>
+	      	<td></td>
+	      	<td></td>
+	      </tr>
+	    </tbody>	
+	  </table>
+
+	<br>
+
+	<div class="container text" id="Recitations">
+	  <h1>Recitations</h1>
+	  <p>Attendance at recitations is not required, but strongly encouraged. Recitations
+	  	 will be interactive and focus on problem solving; we strongly encourage you to 
+	  	 actively participate. A problem sheet will usually be released prior to the 
+	  	 recitation. If you are unable to attend one or you missed an important detail, 
+	  	 feel free to stop by office hours to ask the TAs about the content that was 
+	  	 covered. Of course, we also encourage you to exchange notes with your peers.</p>
+
+	  <table class="table table-hover">
+	    <thead>
+	      <tr>
+	      	<th>Date</th>
+	      	<th>Topic</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr style="background-color: rgba(131,36,35,0.2)">
+	      	<td>Fri, Jan. 16</td>
+	      	<td>No Recitation</td>
+	      </tr>
+	      <tr>
+	      	<td>Fri, Jan. 23</td>
+	      	<td>Recitation 1: Decision Trees & kNNs</td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Fri, Jan. 30</td>
+	      	<td>Recitation 2: Linear Regression & MLE/MAP</td>
+	      </tr>
+	      <tr>
+	      	<td>Fri, Feb. 6</td>
+	      	<td>Recitation 3: Naïve Bayes & Logistic Regression</td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Fri, Feb. 13</td>
+	      	<td>Recitation 4: Neural Networks and PyTorch</td>
+	      </tr>
+	      <tr style="background-color: rgba(117, 154, 171, 0.2)">
+	      	<td>Fri, Feb. 20</td>
+	      	<td>Midterm Practice Problem Review</td>
+	      </tr>
+	      <tr style="background-color: rgba(131,36,35,0.2)">
+	      	<td>Fri, Feb. 27</td>
+	      	<td>No Recitation (Midterm Week)</td>
+	      </tr>
+	      <tr style="background-color: rgba(131,36,35,0.2)">
+	      	<td>Fri, Mar. 6</td>
+	      	<td>No Recitation (Spring Break)</td>
+	      </tr>
+	      <tr>
+	      	<td>Fri, Mar. 13</td>
+	      	<td>Recitation 5: Working with Text Data</td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Fri, Mar. 20</td>
+	      	<td>Recitation 6: Reinforcement Learning</td>
+	      </tr>
+	      <tr>
+	      	<td>Fri, Mar. 27</td>
+	      	<td>Recitation 7: Learning Theory</td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Fri, Apr. 3</td>
+	      	<td>Recitation 8: Ensemble Methods & SVMs</td>
+	      </tr>
+	      <tr style="background-color: rgba(131,36,35,0.2)">
+	      	<td>Fri, Apr. 10</td>
+	      	<td>No Recitation (Spring Carnival)</td>
+	      </tr>
+	      <tr style="background-color: rgba(131,36,35,0.2)">
+	      	<td>Fri, Apr. 17</td>
+	      	<td>No Recitation</td>
+	      </tr>
+	      <tr style="background-color: rgba(117, 154, 171, 0.2)">
+	      	<td>Fri, Apr. 24</td>
+	      	<td>Final Practice Problem Review</td>
+	      </tr>
+	    </tbody>	
+	  </table>
+	</div>
+	
+	<br>
+	
+	<div class="container text" id="Homework">
+	  <h1>Assignments</h1>
+	  <p>Our homework assignments are an opportunity for you all to reason about and 
+	     build/experiment with some of the models that we introduce in class. All 
+	     programming questions must be completed in Python and you must use LaTeX to 
+	     typset your responses to the written questions. You will submit both your code 
+	     and your written responses using
+	     <a href="https://www.gradescope.com/courses/1213676" target="_blank" rel="noopener noreferrer">
+	     Gradescope</a>; note that each assignment will have separate submissions for the code
+	     and the written portion.</p>
+	     
+	  <table class="table table-hover">
+	    <thead>
+	      <tr>
+	      	<th>Release Date</th>
+	      	<th>Topic</th>
+	      	<th>Files</th>
+	      	<th>Due Date</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	      	<td>Thu, Jan. 16</td>
+	      	<td>HW1: Decision Trees & kNNs </td>
+	      	<td></td>
+	      	<td>Thu, Jan. 30</td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Thu, Jan. 30</td>
+	      	<td>HW2: Linear Regression, Logistic Regression, MLE/MAP and Naive Bayes </td>
+            <td></td> 
+	      	<td>Thu, Feb. 13</td>
+	      </tr>
+	      <tr>
+	      	<td>Thu, Feb. 13</td>
+	      	<td>HW3: Regularization and Neural Networks</td>
+	      	<td></td> 
+	      	<td>Thu, Feb. 27</td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Mon, Mar. 9</td>
+	      	<td>HW4: CNNs, RNNs, and Transformers</td>
+	      	<td></td> 
+	      	<td>Fri, Mar. 20</td>
+	      </tr>
+	      <tr>
+	      	<td>Mon, Mar. 23</td>
+	      	<td>HW5: Reinforcement Learning and Unsupervised Learning</td>
+	      	<td></td> 
+	      	<td>Wed, Apr. 1</td>
+	      </tr>
+	      <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Wed, Apr. 1</td>
+	      	<td>HW6: Learning Theory and Ensemble Methods</td>
+	      	<td></td> 
+	      	<td>Wed, Apr. 8</td>
+	      </tr>
+	    </tbody>	
+	  </table>
+	</div>
+
+	<br>
+	
+	<div class="container text" id="Project">
+	  <h1>Project</h1>
+	  <p>Details about the project can be found in the Project Specifications Handout, to be released later in the semester.
+	  <table class="table table-hover">
+	    <thead>
+	      <tr>
+	      	<th>Deliverable</th>
+	      	<th>Link</th>
+			<th>Release Date</th>
+	      	<th>Due Date</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	      	<td>Proposal Form (optional)</td>
+	      	<td></td>
+	      	<td>TBD</td>
+			<td>TBD</td>
+	      </tr>
+		  <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Preference Form</td>
+	      	<td></td>
+	      	<td>TBD</td>
+			<td>TBD</td>
+	      </tr>
+	      <tr>
+	      	<td>First Check-in</td>
+	      	<td></td>
+	      	<td>TBD</td>
+			<td>TBD</td>
+	      </tr>
+		  <tr style="background-color: rgba(0, 0, 0, 0.05)">
+	      	<td>Second Check-in</td>
+			<td></td>
+	      	<!--- <td><a href="" target="_blank" rel="noopener noreferrer">Link to Submit</a></td> -->
+	      	<td>TBD</td>
+			<td>TBD</td>
+	      </tr>
+	      <tr>
+	      	<td>Final Report</td>
+			<td></td>
+	      	<!--- <td><a href="" target="_blank" rel="noopener noreferrer">Link to Submit</a></td> -->
+	      	<td>TBD</td>
+			<td>TBD</td>
+	      </tr>
+	    </tbody>	
+	  </table>
+	</div>
+	
+	<br>
+	
+	<div class="container text" id="Calendar">
+	  <h1>Course Calendar</h1>
+	  <iframe src="https://calendar.google.com/calendar/embed?src=c_4dd128a35fd901d22ad26430f0413350b9e75dfae1b92b454f3e64f8bbc2726a%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
+	  
